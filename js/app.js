@@ -1,12 +1,17 @@
 $(document).ready(function() {
-    var quoteAPI = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback="
 
-    $("#getquote").on("click", function() {
+    var quoteAPI = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?"
 
-        $.getJSON(quoteAPI, function(json) {
-            $("#quote").html(JSON.stringify(json));
-        });
-
+    $('#getquote').click(function() {
+        $.getJSON(quoteAPI).done(update).fail(handleErr);
     });
+
+    function update(json) {
+        $('#quotetext').html(JSON.stringify(json));
+    }
+
+    function handleErr(jqxhr, textStatus, err) {
+        console.log("Request Failed: " + textStatus + ", " + err);
+    }
 
 });
