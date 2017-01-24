@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </head>
 
 <body>
@@ -25,8 +26,14 @@
                     <div id="quoteauthor"></div>
                 </div>
             </div>
-            <div class=".col-xs-12 .col-sm-6 .col-md-8 .col-md-offset-3">
-                <button id="getquote">click</button>
+            <div class="row">
+                <div class=".col-xs-12 .col-sm-6 .col-md-8 .col-md-offset-3">
+                    <button id="getquote">click</button>
+                </div>
+                <div class=".col-xs-12 .col-sm-6 .col-md-8 .col-md-offset-3">
+                    <a class="tweetQuote" style="display:none;" href='https://twitter.com/share=' data-lang='en' data-url='http://urlthatwillbe_dynamically_replaced' , data-via='ckindel' , data-text='Check this out!' data-counturl='http://counturlthatwillbe_dynamically_replaced'>Tweet</a>
+                    <div id="tweet"></div>
+                </div>
             </div>
         </div>
     </div>
