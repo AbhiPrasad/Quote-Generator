@@ -1,7 +1,13 @@
 var quoteAPI = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?"
+var twitterquote = "";
 
 $('#getquote').click(function() {
     $.getJSON(quoteAPI).done(updateQuote).fail(errMsg);
+});
+
+$('#twitterbutton').click(function() {
+    console.log(twitterquote);
+    $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + twitterquote);
 });
 
 $(document).ready(function() {
@@ -14,8 +20,6 @@ function updateQuote(json) {
 
     var quoteTweet = quoteTxt + "-" + quoteAut;
 
-    gettweetData(quoteTweet);
-
     if (quoteAut === "") {
         quoteAut = "Anonymous";
     }
@@ -25,27 +29,12 @@ function updateQuote(json) {
 
     $('#quotetext').html(jsontext);
     $('#quoteauthor').html(jsonauthor);
+
+    twitterquote = jsontext + " - " + jsonauthor;
 }
 
 function errMsg(jqxhr, textStatus, err) {
     console.log("Request Failed: " + textStatus + ", " + err);
-}
-
-function gettweetData(quote) {
-    $('#tweet').empty();
-
-    var clone = $('.twitter-share-button-template').clone();
-
-    clone.removeAttr("style"); // unhide the clone
-    // clone.attr("data-url", someDynamicUrl);
-    // clone.attr("data-counturl", someDynamicCountUrl);
-    clone.attr("class", "twitter-share-button");
-
-    // copy cloned button into div that we can clear later
-    $('#tweet').append(clone);
-
-    // reload twitter scripts to force them to run, converting a to iframe
-    $.getScript("http://platform.twitter.com/widgets.js");
 }
 
 //  <a href="http://twitter.com/share" class="twitter-share-button" data-text="This is what we want to change dynamically" data-count="none" data-via="chris_camps">Tweet</a>
