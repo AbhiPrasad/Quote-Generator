@@ -14,59 +14,32 @@
 </head>
 
 <body>
-    <!--
     <div class="container">
-        <div class="row">
+        <div class="header clearfix">
             <div class="row">
-                <div class=".col-xs-12 .col-sm-6 .col-md-8 .col-md-offset-2">
-                    <div id="quotetext"></div>
+                <div class="col-md-4 col-md-offset-2">
+                    <h3>Quote Generator</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="col-md-1">
+                    <p><a class="btn btn-lg btn-success" id="getquote" href="#" role="button">Get Quote</a></p>
                 </div>
             </div>
             <div class="row">
-                <div class=".col-xs-12 .col-sm-6 .col-md-8 .col-md-offset-3">
-                    <div id="quoteauthor"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class=".col-xs-12 .col-sm-6 .col-md-8 .col-md-offset-3">
-                    <button id="getquote">click</button>
-                </div>
-                <div class=".col-xs-12 .col-sm-6 .col-md-8 .col-md-offset-3">
-                    <a class="tweetQuote" style="display:none;" href='https://twitter.com/share=' data-lang='en' data-url='http://urlthatwillbe_dynamically_replaced' , data-via='ckindel' , data-text='Check this out!' data-counturl='http://counturlthatwillbe_dynamically_replaced'>Tweet</a>
-                    <div id="tweet"></div>
+                <div class="col-md-10">
+                    <h2 class="display-3" id="quotetext">Jumbotron heading</h2>
+                    <p class="lead" id="quoteauthor">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 </div>
             </div>
         </div>
     </div>
--->
-    <div class="container">
-        <div class="header clearfix">
-            <nav>
-                <ul class="nav nav-pills float-right">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-            <h3 class="text-muted">Quote Generator</h3>
-        </div>
-
-        <div class="jumbotron">
-            <h1 class="display-3" id="quotetext">Jumbotron heading</h1>
-            <p class="lead" id="quoteauthor">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-        </div>
-
-
-        <!-- <footer class="footer">
+    <!-- <footer class="footer">
             <p>Abhijeet Prasad</p>
-        </footer>  -->
+        </footer> col-md-offset-1" -->
     </div>
 
     <script src="js/app.js"></script>
