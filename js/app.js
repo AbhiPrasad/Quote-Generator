@@ -20,8 +20,11 @@ function updateQuote(json) {
         quoteAut = "Anonymous";
     }
 
-    $('#quotetext').html(JSON.stringify(quoteTxt));
-    $('#quoteauthor').html(JSON.stringify(quoteAut));
+    var jsontext = JSON.stringify(quoteTxt).replace(/"/g, "");
+    var jsonauthor = JSON.stringify(quoteAut).replace(/"/g, "");
+
+    $('#quotetext').html(jsontext);
+    $('#quoteauthor').html(jsonauthor);
 }
 
 function errMsg(jqxhr, textStatus, err) {
