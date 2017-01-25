@@ -5,13 +5,6 @@ $('#getquote').click(function() {
     $.getJSON(quoteAPI).done(updateQuote).fail(errMsg);
 });
 
-/*
-$('#twitterbutton').click(function() {
-    console.log(twitterquote);
-    $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + twitterquote);
-});
-*/
-
 function tweetIt() {
     var tweetUrl = 'https://twitter.com/share?text=' + encodeURIComponent(twitterquote);
     window.open(tweetUrl);
@@ -43,5 +36,3 @@ function updateQuote(json) {
 function errMsg(jqxhr, textStatus, err) {
     console.log("Request Failed: " + textStatus + ", " + err);
 }
-
-//  <a href="http://twitter.com/share" class="twitter-share-button" data-text="This is what we want to change dynamically" data-count="none" data-via="chris_camps">Tweet</a>
