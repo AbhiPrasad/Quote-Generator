@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="font-awesome.min.css" rel="stylsheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
@@ -37,16 +39,19 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-1 col-xs-1 col-sm-1 col-sm-offset-9 col-xs-offset-5 col-md-offset-9 ">
-                <a class="twitter-share-button" id="twitterbutton" href="https://twitter.com/intent/tweet/?text=" data-size="large" target="_blank">
-                    <button type="button" id="twitterbutton" class="btn btn-primary">Tweet this!</button>
-                </a>
+        <div class="row clearfix ">
+            <div class="col-md-2 col-xs-4 col-sm-3 col-md-offset-8 col-sm-offset-9 col-xs-offset-8">
+                <button onclick="tweetIt()" id="twitterbutton" class="tweetbtn btn-block btn btn-social-icon btn-twitter">
+                    <div class="fa fa-twitter"><i class="fa fa-twitter" aria-hidden="true"></i>Tweet This!</div>
+            </button>
             </div>
         </div>
     </div>
     <!-- <footer class="footer">
             <p>Abhijeet Prasad</p>
+              <a class="twitter-share-button" id="twitterbutton" href="https://twitter.com/intent/tweet/?text=" data-size="large" target="_blank">
+                    <button onclick="tweetIt()" type="button" id="twitterbutton" class="btn btn-primary">Tweet this!</button>
+                </a>
         </footer> col-md-offset-1" -->
     </div>
 

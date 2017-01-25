@@ -5,10 +5,17 @@ $('#getquote').click(function() {
     $.getJSON(quoteAPI).done(updateQuote).fail(errMsg);
 });
 
+/*
 $('#twitterbutton').click(function() {
     console.log(twitterquote);
     $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + twitterquote);
 });
+*/
+
+function tweetIt() {
+    var tweetUrl = 'https://twitter.com/share?text=' + encodeURIComponent(twitterquote);
+    window.open(tweetUrl);
+}
 
 $(document).ready(function() {
     $.getJSON(quoteAPI).done(updateQuote).fail(errMsg);
